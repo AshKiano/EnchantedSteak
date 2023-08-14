@@ -19,12 +19,14 @@ import org.bukkit.inventory.meta.ItemMeta;
 
 public class EnchantedSteak extends JavaPlugin implements Listener {
 
-    private final String LORE_TEXT = "Zlatý steak";
+    private final String LORE_TEXT = "Enchanted steak";
 
     @Override
     public void onEnable() {
         this.getServer().getPluginManager().registerEvents(this, this);
         setupCraftingRecipe();
+
+        Metrics metrics = new Metrics(this, 19479);
     }
 
     private void setupCraftingRecipe() {
